@@ -11,13 +11,14 @@ var challengeInput = [1753,1858,1860,1978,1758,1847,2010,1679,1222,1723,1592,199
     1995,1960,1625,1411,1558,1817,1854,1617,1478,735,1593,1778,1809,1584,1438,1845,1712,1655,
     1990,1578,1703,1895,1765,1572]
 
-// A program to find with pair of numbers sums and print their multiplication
-var dictionary = {};
 
-for (const number of challengeInput) {
-    dictionary[number]= true
-    let toFind = 2020 - number;
-    if (dictionary[toFind]) {
-        console.log(number*toFind);
+    for (const numberA of challengeInput) {
+        for (const numberB of challengeInput) {
+            for (const numberC of challengeInput) {
+                if (numberA + numberB + numberC === 2020) {
+                    console.log(numberA*numberB*numberC);
+                    return;
+                }
+            }
+        }
     }
-}
