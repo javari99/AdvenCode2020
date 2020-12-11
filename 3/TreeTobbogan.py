@@ -329,15 +329,31 @@ nchars = len(terrainMap[0])
 # Current x and y
 cx = 0
 cy = 0
-# Total number of trees
-totalTrees = 0
-
-while cy < nlines-1:
-    cx += 3
-    cy += 1
-    if terrainMap[cy][cx % nchars] == '#':
-        totalTrees += 1
+combx = [1, 3, 5, 7, 1]
+comby = [1, 1, 1, 1, 2]
+results = []
+for i in range(len(combx)):    
+    # Total number of trees
+    totalTrees = 0  
+    cx = 0
+    cy = 0
+    while cy < nlines-1:
+        cx += combx[i]
+        cy += comby[i]
+        if terrainMap[cy][cx % nchars] == '#':
+            totalTrees += 1
     
-print(totalTrees)
+    results.append(totalTrees)
+    
+print("Total trees found per round: ")
+print(results)
+# The result for the first part of the exercise is the second value of the array
+print("The result for the first part is: " + str(results[1]))
+finalResult = 1
+
+for i in results:
+    finalResult*=i
+
+print("Final number: " + str(finalResult))
 
         
