@@ -7,8 +7,8 @@ For this repository, i will be solving the problems of the Advent of code 2020 c
 I will use a variety of different programming languages, some I am still learning and some I feel comfortable with to perform these challenges. ***Note:*** All of the examples will be executed on MAC OS.
 
 ## Current progress:
-- [x] Day 1 
-- [ ] Day 2
+- [X] Day 1 
+- [X] Day 2
 - [ ] Day 3
 - [ ] Day 4
 - [ ] Day 5
